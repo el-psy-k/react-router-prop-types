@@ -38,6 +38,18 @@ export const match = PropTypes.shape({
   url: PropTypes.string.isRequired,
 });
 
+const childRoute = PropTypes.shape({
+  path: PropTypes.string.isRequired,
+  exact: PropTypes.bool,
+  component: PropTypes.element.isRequired,
+  routes: PropTypes.arrayOf(childRoute),
+});
+
+export const route = PropTypes.shape({
+  component: PropTypes.element,
+  routes: PropTypes.arrayOf(childRoute),
+});
+
 export default {
   location,
   history,
