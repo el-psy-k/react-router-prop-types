@@ -54,4 +54,5 @@ export default {
   location,
   history,
   match,
+  route,
 };

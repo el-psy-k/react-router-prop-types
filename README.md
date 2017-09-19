@@ -34,5 +34,6 @@ MyComponent.propTypes = {
   history: ReactRouterPropTypes.history.isRequired,
   location: ReactRouterPropTypes.location.isRequired,
   match: ReactRouterPropTypes.match.isRequired,
+  route: ReactRouterPropTypes.route.isRequired, // for react-router-config
 };
 ```
