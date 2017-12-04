@@ -41,12 +41,18 @@ export const match = PropTypes.shape({
 const childRoute = PropTypes.shape({
   path: PropTypes.string.isRequired,
   exact: PropTypes.bool,
-  component: PropTypes.element.isRequired,
+  component: PropTypes.oneOfType([
+    PropTypes.element.isRequired,
+    PropTypes.func.isRequired, // for mobx injector
+  ]),
   routes: PropTypes.arrayOf(childRoute),
 });
 
 export const route = PropTypes.shape({
-  component: PropTypes.element,
+  component: PropTypes.oneOfType([
+    PropTypes.element.isRequired,
+    PropTypes.func.isRequired, // for mobx injector
+  ]),
   routes: PropTypes.arrayOf(childRoute),
 });
 
