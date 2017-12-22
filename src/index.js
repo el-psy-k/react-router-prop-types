@@ -24,7 +24,7 @@ export const history = PropTypes.shape({
   goBack: PropTypes.func.isRequired,
   goForward: PropTypes.func.isRequired,
   index: PropTypes.number, // only in createMemoryHistory
-  length: PropTypes.number, // not required for StaticRouter
+  length: PropTypes.number,
   listen: PropTypes.func.isRequired,
   location: location.isRequired,
   push: PropTypes.func.isRequired,
