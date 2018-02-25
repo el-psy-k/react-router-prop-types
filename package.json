@@ -25,6 +25,10 @@
     "url": "https://github.com/Javascript-Ninja/react-router-prop-types/issues"
   },
   "homepage": "https://github.com/Javascript-Ninja/react-router-prop-types#readme",
+  "dependencies": {
+    "@types/prop-types": "^15.5.2",
+    "prop-types": "^15.6.0"
+  },
   "devDependencies": {
     "typescript": "^2.7.2"
   }
