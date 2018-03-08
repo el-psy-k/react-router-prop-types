@@ -42,7 +42,7 @@ const childRoute = PropTypes.shape({
   path: PropTypes.string.isRequired,
   exact: PropTypes.bool,
   component: PropTypes.element.isRequired,
-  // @ts-ignore TS2448, TS2454
+  // @ts-ignore reference: https://github.com/Microsoft/TypeScript/issues/22370
   routes: PropTypes.arrayOf(childRoute),
 });
 
