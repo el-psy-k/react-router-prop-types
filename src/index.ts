@@ -1,4 +1,4 @@
-import * as PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const location = PropTypes.shape({
   hash: PropTypes.string.isRequired,
