@@ -38,17 +38,14 @@ export const match = PropTypes.shape({
   url: PropTypes.string.isRequired,
 });
 
-const childRoute = PropTypes.shape({
-  path: PropTypes.string.isRequired,
-  exact: PropTypes.bool,
-  component: PropTypes.element.isRequired,
-  // @ts-ignore reference: https://github.com/Microsoft/TypeScript/issues/22370
-  routes: PropTypes.arrayOf(childRoute),
-});
-
 export const route = PropTypes.shape({
-  component: PropTypes.element,
-  routes: PropTypes.arrayOf(childRoute),
+  path: PropTypes.string,
+  exact: PropTypes.bool,
+  strict: PropTypes.bool,
+  sensitive: PropTypes.bool,
+  component: PropTypes.func,
+  // @ts-ignore reference: https://github.com/Microsoft/TypeScript/issues/22370
+  routes: PropTypes.arrayOf(PropTypes.shape(route)),
 });
 
 export default {
