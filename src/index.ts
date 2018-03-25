@@ -38,15 +38,16 @@ export const match = PropTypes.shape({
   url: PropTypes.string.isRequired,
 });
 
-export const route = PropTypes.shape({
+const routeShape: any = {
   path: PropTypes.string,
   exact: PropTypes.bool,
   strict: PropTypes.bool,
   sensitive: PropTypes.bool,
   component: PropTypes.func,
-  // @ts-ignore reference: https://github.com/Microsoft/TypeScript/issues/22370
-  routes: PropTypes.arrayOf(PropTypes.shape(route)),
-});
+};
+routeShape.routes = PropTypes.arrayOf(PropTypes.shape(routeShape));
+
+export const route = PropTypes.shape(routeShape);
 
 export default {
   location,

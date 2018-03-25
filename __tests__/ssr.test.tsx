@@ -42,13 +42,18 @@ describe('server side rendering', () => {
     }
     const routes = [
       {
-        path: '/test',
+        path: '/root',
         component: TestComponent,
-        routes: [],
+        routes: [
+          {
+            path: '/child',
+            component: TestComponent,
+          }
+        ],
       }
     ];
     ReactDOMServer.renderToString(
-      <StaticRouter context={{}} location="/test">
+      <StaticRouter context={{}} location="/root">
         {renderRoutes(routes)}
       </StaticRouter>
     );
