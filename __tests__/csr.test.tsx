@@ -5,6 +5,8 @@ import { createBrowserHistory, createHashHistory, createMemoryHistory } from 'hi
 import ReactRouterPropTypes from '../src';
 
 describe('client side rendering', () => {
+  const warning = expect.stringMatching(/(Invalid prop|Failed prop type)/gi);
+
   const node = document.createElement('div');
 
   afterEach(() => {
@@ -30,7 +32,7 @@ describe('client side rendering', () => {
       </Router>,
       node,
     );
-    expect(console.error).not.toBeCalled();
+    expect(console.error).not.toHaveBeenCalledWith(warning);
   });
 
   test('hash history', () => {
@@ -41,7 +43,7 @@ describe('client side rendering', () => {
       </Router>,
       node,
     );
-    expect(console.error).not.toBeCalled();
+    expect(console.error).not.toHaveBeenCalledWith(warning);
   });
 
   test('memory history', () => {
@@ -52,6 +54,6 @@ describe('client side rendering', () => {
       </Router>,
       node,
     );
-    expect(console.error).not.toBeCalled();
+    expect(console.error).not.toHaveBeenCalledWith(warning);
   });
 });
