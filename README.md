@@ -18,7 +18,6 @@ class MyComponent extends React.Component {
   static propTypes = {
     // You can chain any of the above with `isRequired` to make sure a warning
     // is shown if the prop isn't provided.
-    computedMatch: ReactRouterPropTypes.match.isRequired,
     history: ReactRouterPropTypes.history.isRequired,
     location: ReactRouterPropTypes.location.isRequired,
     match: ReactRouterPropTypes.match.isRequired,
