@@ -4,7 +4,7 @@
   "description": "Runtime type checking for react-router props",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "tsc",
+    "prepublishOnly": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -28,10 +28,10 @@
   "homepage": "https://github.com/Javascript-Ninja/react-router-prop-types#readme",
   "dependencies": {
     "@types/prop-types": "^15.5.2",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.0",
+    "@types/jest": "^22.2.2",
     "history": "^4.7.2",
     "jest": "^22.4.3",
     "react": "^16.2.0",
