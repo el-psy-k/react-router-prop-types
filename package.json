@@ -32,15 +32,20 @@
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
+    "@types/history": "^4.6.2",
     "@types/jest": "^22.2.2",
+    "@types/react": "^16.3.5",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-config": "^1.0.6",
     "history": "^4.7.2",
     "jest": "^22.4.3",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "react-router": "^4.2.0",
     "react-router-config": "^1.0.0-beta.4",
     "ts-jest": "^22.4.2",
-    "typescript": "^2.7.2"
+    "typescript": "^2.8.1"
   },
   "jest": {
     "transform": {
