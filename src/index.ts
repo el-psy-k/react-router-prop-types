@@ -49,9 +49,12 @@ routeShape.routes = PropTypes.arrayOf(PropTypes.shape(routeShape));
 
 export const route = PropTypes.shape(routeShape);
 
+export const staticContext = PropTypes.object; // for simple usage
+
 export default {
   location,
   history,
   match,
   route,
+  staticContext,
 };
