@@ -39,7 +39,10 @@ export const match = PropTypes.shape({
 });
 
 const routeShape: any = {
-  path: PropTypes.string,
+  path: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
   exact: PropTypes.bool,
   strict: PropTypes.bool,
   sensitive: PropTypes.bool,
