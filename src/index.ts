@@ -17,12 +17,12 @@ export const location = PropTypes.shape({
 export const history = PropTypes.shape({
   action: PropTypes.oneOf(['PUSH', 'REPLACE', 'POP']).isRequired,
   block: PropTypes.func.isRequired,
-  canGo: PropTypes.func, // only in createMemoryHistory
   createHref: PropTypes.func.isRequired,
-  entries: PropTypes.arrayOf(location), // only in createMemoryHistory
   go: PropTypes.func.isRequired,
-  back: PropTypes.func.isRequired,
-  forward: PropTypes.func.isRequired,
+  goBack: PropTypes.func, // only in server side rendering
+  goForward: PropTypes.func, // only in server side rendering
+  back: PropTypes.func, // only in client side rendering
+  forward: PropTypes.func, // only in client side rendering
   index: PropTypes.number, // only in createMemoryHistory
   length: PropTypes.number,
   listen: PropTypes.func.isRequired,
