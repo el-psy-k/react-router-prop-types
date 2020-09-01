@@ -1,6 +1,6 @@
 {
   "name": "react-router-prop-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Runtime type checking for react-router props",
   "main": "index.js",
   "types": "index.d.js",
